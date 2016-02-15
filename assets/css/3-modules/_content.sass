@@ -1,0 +1,255 @@
+/////////////////////// 
+//   Content Stuff   // 
+///////////////////////
+.eye-candy
+	width: 100%
+	height: calc(100vh - 64px)
+	position: relative
+	background: url("../img/cbus_skyline_bw.jpg"), no-repeat
+	background-size: cover
+	padding-top: 64px
+
+	+display(flex)
+	+flex-direction(column)
+	+justify-content(center)
+	+align-items(center) 
+
+	img
+		width: 40vh
+		height: 40vh
+		display: block
+		margin: 0 auto
+		padding-bottom: 50px
+	h2
+		font-weight: 700
+		text-align: center
+		color: white
+		letter-spacing: 0.05em
+		line-height: 1.05
+		
+	.blurb
+		background-color: rgba(0,0,0,0.5)
+		display: inline-block
+		padding: 0.3em 0.5em
+		border: 6px solid white
+
+.content
+	h2
+		padding-bottom: 20px
+	h3
+		padding: 15px 0
+	p
+		padding: 10px 0
+	ul
+		list-style-type: circle
+		list-style-position: inside
+
+.container
+	padding: 20px 0
+	width: 90%
+	height: 100%
+	margin: 0 auto
+	+clearfix
+
+.col-1
+	float: left
+	width: 45%
+.col-2
+	width: 45%
+	margin-left: 50%
+
+.about
+	width: 40%
+
+.education
+	margin-left: 50%
+	padding-left: 20px
+
+.school-description
+	margin-left: 110px
+	// padding-bottom: 20px
+	span
+		display: block
+		float: left
+		margin-left: -110px
+		margin-top: 5px
+		svg
+			+size(90px)
+@media screen and (max-width: 900px)
+	.col-1
+		float: none
+		width: 100%
+	.col-2
+		margin: 0
+		width: 100%
+		padding-left: 0
+		padding-top: 20px
+@media screen and (max-width: 640px)
+	.school-description
+		margin-left: 0
+		span
+			display: none
+
+.language
+	padding-bottom: 20px
+	h2
+		padding: 20px 0 30px
+	+clearfix
+
+.lang-icons
+	width: 100%
+	+display(flex)
+	+align-items(center)
+	+justify-content(flex-start)
+	.icon
+		float: left
+		padding: 10px 10px 10px 0
+		+size(10%)
+	span
+		display: inline-block
+		width: 60%
+		height: 20px
+	.outer
+		border: solid 3px black
+		border-radius: 4px
+		z-index: 6
+	.inner
+		z-index: 5
+
+// 
+// SKILLS
+// 
+#html
+	width: 70%
+	background: #e44d26
+#css
+	width: 60%
+	background: #1572b6
+#javascript
+	width: 35%
+	background: #f0db4f
+#php
+	width: 20%
+	background: #6181b6
+
+#cpp
+	width: 70%
+	background: #9c033a
+#python
+	width: 40%
+	background: #ffd845
+#java
+	width: 15%
+	background: #eb3738
+#mysql
+	width: 20%
+	background: #00618a
+
+// 
+// CONTACT
+//
+.contact
+	background: $darkgrey
+	color: white
+	width: 100%
+	text-align: center
+
+form
+	max-width: 450px
+	margin: 0 auto
+	padding: 20px 0
+
+	input, textarea
+		border: 3px solid black
+		border-radius: 3px
+		width: 100%
+		+box-sizing(border-box)
+		padding: 10px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+
+		&:focus
+			outline: none
+			border-color: $teal
+
+	textarea
+		height: 10em
+		resize: none
+
+	.submit-wrap
+		text-wrap: right
+
+	[type="submit"]
+		background: black
+		color: white
+		font-size: 18px
+		text-transform: uppercase
+		width: 33%
+		&:hover
+			background: $grey
+
+	.contact-info-group
+		+clearfix
+
+		label
+			width: 50%
+			float: left
+			+box-sizing(border-box)
+			padding-left: 10px
+
+		&:nth-child(1)
+			padding-right: 10px
+
+		&:nth-child(2)
+			padding-left: 10px
+
+	label
+		display: block
+		margin-bottom: 20px
+
+		span
+			display: block
+
+
+@media (max-width: 541px)
+	form
+		.contact-info-group
+
+			label
+				width: 100%
+				padding: 0
+
+			&:nth-child(1)
+				padding: 0
+
+			&:nth-child(2)
+				padding: 0
+
+		[type="submit"]
+			width: 100%
+
+// .email
+// 	width: 100%
+// 	background: $darkgrey
+// 	padding: 40px 0
+// 	text-align: center
+// 	margin: 0 auto
+
+// 	.biglink
+// 		font-size: 58px
+
+// 		&:hover
+// 			color: white
+
+// 	@media (max-width: 541px)
+// 		.biglink
+// 			font-size: 35px
+
+// 	@media (max-width: 300px)
+// 		.biglink
+// 			font-size: 24px
+
+// 	@media (max-width: 200px)
+// 		.biglink
+// 			font-size: 18px

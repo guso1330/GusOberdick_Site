@@ -1,0 +1,41 @@
+//////////////////////
+//    Footer Junk   //
+//////////////////////
+
+footer
+	height: 60px
+	width: 100%
+	background-color: black
+	position: relative
+	.footer-content
+		width: 70%
+		margin: 0 auto
+		position: absolute
+		top: 50%
+		left: 50%
+		+transform(translate(-50%, -50%))
+		p
+			float: left
+			color: white
+			line-height: 40px
+		.logo-github
+			path
+				fill: white
+		.icons
+			float: right
+			[class^="logo-"]
+				padding: 0 10px
+				float: left
+				svg
+					width: 40px
+					height: 40px
+					@media all and (max-width: 353px)
+						+size(20px)
+						padding: 10px 0 0 4px
+
+		@media all and (max-width: 530px)
+			width: 80%
+		@media all and (max-width: 400px)
+			width: 90%	
+			p
+				font-size: .8em

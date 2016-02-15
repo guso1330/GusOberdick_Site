@@ -1,0 +1,141 @@
+///////////////////////
+//     Head Stuff    //
+///////////////////////
+.head-up
+	top: -64px
+	-webkit-transition: top .2s
+	transition: top .2s
+
+.head-down
+	top: 0px
+	-webkit-transition: top .1s
+	transition: top .1s
+
+.mobile-up
+	top: -208px
+	-webkit-transition: top .2s
+	transition: top .2s
+
+.mobile-down
+	top: 0px
+	-webkit-transition: top .1s
+	transition: top .1s
+
+header
+	width: 100%
+	height: 64px
+	background-color: black
+	position: fixed
+	// top: 0
+	// left: 0
+	z-index: 990
+	.nav-bar
+		width: 70%
+		margin: 0 auto
+		position: relative
+		color: white
+		top: 12px
+		line-height: 1
+		h2
+			float: left
+			display: inline-block
+		h2 a:hover
+			color: $teal
+		ul
+			float: right
+			li
+				padding-top: 8px
+				margin: 0 20px
+				float: left
+			li a:hover
+				color: $teal
+
+		a
+			color: white
+			&:hover
+				color: $teal
+	
+		//
+		// MOBILE NAV
+		//	
+
+		.mobile-nav-toggle
+			display: none
+			width: 32px
+			height: 32px
+			float: right
+			align-items: center
+			cursor: pointer
+			position: relative
+
+			span
+				content: ""
+				display: block
+				height: 2px
+				width: 100%
+				background: white
+
+			span.teal,
+				background: $teal
+			
+			#menu-bar1
+				position: absolute
+				left: 0px
+				top: 4px
+
+			#menu-bar3
+				position: absolute
+				left: 0px
+				bottom: 4px
+			
+			// **COOL ANIMATION**
+			// &:hover span
+			// 	background: transparent
+			// &:hover span:before,
+			// &:hover span:after
+			// 	transform-origin: center
+			// 	transform: rotate(45deg)
+			// 	top: 0
+			// &:hover span:after
+			// 	transform: rotate(-45deg)
+
+.mobile-nav
+	z-index: 999
+	display: none
+	position: fixed
+	right: 0
+	width: 40%
+	background: black
+	margin-top: 64px
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+		a
+			color: white
+		li
+			text-align: center
+			padding: 10px 0
+			&:hover,
+			&:focus
+				background: $darkgrey
+
+.mobile-nav.is-open
+	display: block
+
+
+@media (max-width: 700px)
+	header
+		.nav-bar
+			width: 90%
+			h2 a:hover
+				color: white
+			ul
+				display: none
+
+			.mobile-nav-toggle
+				display: flex
+
+@media (min-width: 700px)
+	.mobile-nav.is-open
+		display: none

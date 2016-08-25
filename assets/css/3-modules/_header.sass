@@ -24,8 +24,8 @@
 header
 	width: 100%
 	height: 64px
-	background-color: black
 	box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75)
+	background-color: rgba(17,17,17,0.85)
 	position: fixed
 	z-index: 990
 	.nav-bar
@@ -105,7 +105,7 @@ header
 	position: fixed
 	right: 0
 	width: 40%
-	background: $black
+	background: $nav-bar-black
 	margin-top: 64px
 	ul
 		list-style: none
@@ -116,25 +116,28 @@ header
 		li
 			text-align: center
 			padding: 10px 0
-			&:hover,
-			&:focus
+			&:hover
 				background: $darkgrey
 
 .mobile-nav.is-open
 	display: block
 
-@media (max-width: 700px)
+@media screen and (max-width: 700px)
 	header
 		.nav-bar
 			width: 90%
 			h2 a:hover
-				color: white
+				background-color: rgba(0,0,0,0)
+				color: $white
 			ul
 				display: none
+				a li
+					&:hover
+						background-color: none
 
 			.mobile-nav-toggle
 				display: flex
 
-@media (min-width: 700px)
+@media screen and (min-width: 700px)
 	.mobile-nav.is-open
 		display: none

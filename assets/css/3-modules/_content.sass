@@ -36,9 +36,9 @@
 
 .content
 	h2
-		padding-bottom: 20px
+		padding-bottom: 10px
 	h3
-		padding: 15px 0
+		padding: 10px 0
 	p
 		padding: 10px 0
 	ul
@@ -46,25 +46,19 @@
 		list-style-position: inside
 
 .container
-	padding: 20px 0
-	width: 90%
 	height: 100%
+	max-width: 90%
 	margin: 0 auto
+	padding: 20px 0
 	+clearfix
 
 .col-1
 	float: left
 	width: 45%
+
 .col-2
 	width: 45%
 	margin-left: 50%
-
-.about
-	width: 40%
-
-.education
-	margin-left: 50%
-	padding-left: 20px
 
 .school-description
 	margin-left: 110px
@@ -93,8 +87,6 @@
 
 .language
 	padding-bottom: 20px
-	h2
-		padding: 20px 0 30px
 	+clearfix
 
 .lang-icons
@@ -106,6 +98,7 @@
 		float: left
 		padding: 10px 10px 10px 0
 		+size(10%)
+		+clearfix
 	span
 		display: inline-block
 		width: 60%
@@ -117,6 +110,7 @@
 	.inner
 		z-index: 5
 
+
 // 
 // SKILLS
 // 
@@ -127,7 +121,7 @@
 	width: 60%
 	background: #1572b6
 #javascript
-	width: 35%
+	width: 42%
 	background: #f0db4f
 #php
 	width: 20%
@@ -137,14 +131,45 @@
 	width: 70%
 	background: #9c033a
 #python
-	width: 40%
+	width: 65%
 	background: #ffd845
 #java
-	width: 15%
+	width: 25%
 	background: #eb3738
 #mysql
 	width: 20%
 	background: #00618a
+
+//
+// WORK
+// 
+.work-exp
+	+clearfix
+	.job-description
+		font-size: 1.3em
+		font-weight: 700
+		padding: 5px 0
+
+//
+// RESUME
+//
+a
+	color: white
+	.resume-container
+		background-color: $teal
+		font-size: 2em
+		width: 100%
+		margin-top: 30px
+		padding: 50px 0
+		&:hover
+			background-color: $orange
+			webkit-transition: background-color .5s
+			transition: background-color .5s
+		p
+			text-align: center
+	@media (max-width: 700px)
+		&:hover
+			background-color: $teal
 
 // 
 // CONTACT
@@ -152,14 +177,18 @@
 .contact
 	background: $darkgrey
 	color: white
-	width: 100%
+	padding: 20px 0
 	text-align: center
+	width: 100%
+	h3
+		padding: 0
 
 form
 	max-width: 450px
 	margin: 0 auto
-	padding: 20px 0
-
+	padding: 15px 0
+	label span
+		padding: 5px 0
 	input, textarea
 		border: 3px solid black
 		border-radius: 3px
@@ -229,28 +258,3 @@ form
 
 		[type="submit"]
 			width: 100%
-
-// .email
-// 	width: 100%
-// 	background: $darkgrey
-// 	padding: 40px 0
-// 	text-align: center
-// 	margin: 0 auto
-
-// 	.biglink
-// 		font-size: 58px
-
-// 		&:hover
-// 			color: white
-
-// 	@media (max-width: 541px)
-// 		.biglink
-// 			font-size: 35px
-
-// 	@media (max-width: 300px)
-// 		.biglink
-// 			font-size: 24px
-
-// 	@media (max-width: 200px)
-// 		.biglink
-// 			font-size: 18px

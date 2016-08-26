@@ -1,6 +1,5 @@
 _site
 .sass-cache
 .jekyll-metadata
-package.json
 design
 airplane_tank_rocket

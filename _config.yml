@@ -19,6 +19,7 @@ github_username:  guso133
 
 sass:
     sass_dir: assets/css
+    style: compressed
 
 # Build settings
 markdown: kramdown

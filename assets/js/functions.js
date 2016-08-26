@@ -13,8 +13,9 @@ function checkMobileNav() {
 }
 
 function smoothScroll (duration) {
-  $('a[href^="#"]').on('click', function(event) {
-
+  $('a[href^="#"]').on('click', function (event) {
+      $('.mobile-nav').toggleClass('is-open');
+      $('.mobile-nav-toggle > span').toggleClass('teal');
       var target = $( $(this).attr('href') );
 
       if( target.length ) {
@@ -72,7 +73,6 @@ function checkScroll()
     }
 }
 
-/*global jQuery */
 /*!
 * FitText.js 1.2
 *
@@ -83,7 +83,7 @@ function checkScroll()
 * Date: Thu May 05 14:23:00 2011 -0600
 */
 
-(function( $ ){
+(function($) {
 
   $.fn.fitText = function( kompressor, options ) {
 

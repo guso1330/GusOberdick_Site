@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 design
 airplane_tank_rocket
+./build.sh

@@ -5,7 +5,7 @@
 	width: 100%
 	height: calc(100vh - 64px)
 	position: relative
-	background: url("../img/cbus_skyline_bw.jpg"), no-repeat
+	background: url("../img/cbus_skyline.jpg"), no-repeat
 	background-size: cover
 	padding-top: 64px
 
@@ -24,15 +24,15 @@
 	h2
 		font-weight: 700
 		text-align: center
-		color: white
+		color: $white
 		letter-spacing: 0.05em
 		line-height: 1.05
-		
+		padding: 0 12px
 	.blurb
 		background-color: rgba(0,0,0,0.5)
 		display: inline-block
 		padding: 0.3em 0.5em
-		border: 6px solid white
+		border: 6px solid $white
 
 .content
 	h2
@@ -104,7 +104,7 @@
 		width: 60%
 		height: 20px
 	.outer
-		border: solid 2px black
+		border: solid 2px $black
 		border-radius: 6px
 		z-index: 6
 	.inner
@@ -125,7 +125,7 @@
 // RESUME
 //
 a
-	color: white
+	color: $white
 	.resume-container
 		background-color: $teal
 		font-size: 2em
@@ -147,7 +147,7 @@ a
 //
 .contact
 	background: $darkgrey
-	color: white
+	color: $white
 	padding: 20px 0
 	text-align: center
 	width: 100%
@@ -161,7 +161,7 @@ form
 	label span
 		padding: 5px 0
 	input, textarea
-		border: 3px solid black
+		border: 2px solid $black
 		border-radius: 3px
 		width: 100%
 		+box-sizing(border-box)
@@ -182,8 +182,8 @@ form
 		text-wrap: right
 
 	[type="submit"]
-		background: black
-		color: white
+		background: $black
+		color: $white
 		font-size: 18px
 		text-transform: uppercase
 		width: 33%

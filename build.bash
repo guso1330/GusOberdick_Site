@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Running Jekyll server..."
 jekyll clean
-jekyll serve
+jekyll serve --port 8000

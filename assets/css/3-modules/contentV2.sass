@@ -1,8 +1,12 @@
 .content
 	margin: 0 auto
-	width: 960px
+	max-width: 960px
+
+.hidden
+	visibility: hidden
 
 .logos
+	// height: 300px
 	padding: 50px 0
 	text-align: center
 
@@ -19,16 +23,10 @@
 	width: 200px
 	&:first-child
 		padding-right: 40px
-		&.animate
 	&:last-child
 		padding-left: 40px
 	svg
-		bottom: -200px
 		display: block
 		height: 200px
-		opacity: 0
 		position: absolute
 		width: 200px
-		&.animate
-			bottom: 0
-			opacity: 1

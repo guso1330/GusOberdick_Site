@@ -1,0 +1,32 @@
+.eye-candy
+	width: 100%
+	height: calc(100vh - 64px)
+	position: relative
+	background: url("../img/cbus_skyline.jpg"), no-repeat
+	background-size: cover
+	padding-top: 64px
+
+	+display(flex)
+	+flex-direction(column)
+	+justify-content(center)
+	+align-items(center) 
+
+	img
+		width: 40vh
+		// fix weird stretch
+		height: 40vh
+		display: block
+		margin: 0 auto
+		padding-bottom: 50px
+	h2
+		font-weight: 700
+		text-align: center
+		color: $white
+		letter-spacing: 0.05em
+		line-height: 1.05
+		padding: 0 12px
+	.blurb
+		background-color: rgba(0,0,0,0.5)
+		display: inline-block
+		padding: 0.3em 0.5em
+		border: 6px solid $white

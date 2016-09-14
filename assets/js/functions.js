@@ -1,8 +1,9 @@
 $(function() {
     checkScroll();
-    smoothScroll(300);
+    smoothScroll(100);
     checkMobileNav();
     $('.blurb').fitText(1.2, { minFontSize: '16px', maxFontSize: '32px' });
+    animateLogos();
 });
 
 function checkMobileNav() {
@@ -71,6 +72,21 @@ function checkScroll()
         
         lastScrollTop = st;
     }
+}
+
+function animateLogos() {
+  var $logos = $('.logos'),
+      $school_logo = $('.school-logo > svg');
+
+  $(window).scroll( function (event) {
+    var y = $(this).scrollTop()
+        logos_height = $logos.height();
+
+    if(y >= logos_height/2 && $logos.hasClass('hidden') ) {
+      $logos.toggleClass('hidden');
+      $school_logo.addClass('animate');
+    }
+  });
 }
 
 /*!

@@ -2,8 +2,11 @@
 	width: 100%
 	height: calc(100vh - 64px)
 	position: relative
-	background: url("../img/cbus_skyline.jpg"), no-repeat
+	background: url("../img/cbus_skyline.jpg")
 	background-size: cover
+	background-repeat: no-repeat
+	background-position: center 20%
+	box-shadow: 0px 0px 25px 0px rgba(10,25,90,0.95)
 	padding-top: 64px
 
 	+display(flex)
@@ -27,6 +30,7 @@
 		padding: 0 12px
 	.blurb
 		background-color: rgba(0,0,0,0.5)
+		border: 3px solid $white
 		display: inline-block
+		font-weight: 300
 		padding: 0.3em 0.5em
-		border: 6px solid $white

@@ -1,12 +1,62 @@
 <div class="container">
 	<div class="content">
-		<div class="logos hidden">
-			<span class="school-logo">
-				{% include icons/slc.html %}
-			</span>
-			<span class="school-logo">
-				{% include icons/oulogo.html %}
-			</span>
+		<div class="about-btn-wrapper">
+			<button class="about-btn" type="button" ><h2>About me...</h2></button>
+		</div>
+		<div class="about">
+			<div class="statement">
+				<p>Hi, my name is <strong>Augustus R. Oberdick</strong>. I was born and raised in Columbus, OH and have been an avid programmer/coder for 4 years now. My interests include <strong>front-end</strong>, <strong>software</strong>, and <strong>UI/UX</strong> development as I wish to create my own applications and websites. Currently, I am in pursuit of a BS in Computer Science at Ohio University. As a developer, I am always seeking new challenges and knowledge for I am naturally motivated and curious.</p>
+			</div>
+			<div class="education">
+				<h2>Education</h2>
+				<div class="logos">
+					<span class="school-logo">
+						{% include icons/slc.html %}
+					</span>
+					<span class="school-logo">
+						{% include icons/oulogo.html %}
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="skill-wrapper">
+			<h2>Web Development</h2>
+			<div class="skill-bar">
+				<div class="icon">{% include icons/HTML.html %}</div>
+				<div class="count-bar animate" id="html"></div>
+			</div>
+			<div class="skill-bar">
+				<div class="icon">{% include icons/CSS.html %}</div>
+				<div class="count-bar animate" id="css"></div>
+			</div>
+			<div class="skill-bar">
+				<div class="icon">{% include icons/javascript.html %}</div>
+				<div class="count-bar animate" id="javascript"></div>
+			</div>
+			<div class="skill-bar">
+				<div class="icon">{% include icons/php.html %}</div>
+				<div class="count-bar animate" id="php"></div>
+			</div>
+		</div>
+		<div class="skill-wrapper">
+			<h2>Software Development</h2>
+			<div class="skill-bar">
+				<div class="icon">{% include icons/cpp.html %}</div>
+				<div class="count-bar animate" id="cpp"></div>
+			</div>
+			<div class="skill-bar">
+				<div class="icon">{% include icons/python.html %}</div>
+				<div class="count-bar animate" id="python"></div>
+			</div>
+			<div class="skill-bar">
+				<div class="icon">{% include icons/java.html %}</div>
+				<div class="count-bar animate" id="java"></div>
+			</div>
+			<div class="skill-bar">
+				<div class="icon">{% include icons/mysql.html %}</div>
+				<div class="count-bar animate" id="mysql"></div>
+			</div>
 		</div>
 	</div>
 </div>

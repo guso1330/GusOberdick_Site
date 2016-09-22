@@ -1,9 +1,10 @@
 $(function() {
     checkScroll();
-    smoothScroll(100);
+    // smoothScroll(100);
     checkMobileNav();
-    $('.blurb').fitText(1.2, { minFontSize: '16px', maxFontSize: '32px' });
-    animateLogos();
+    $('.blurb').fitText(1.2, { minFontSize: '14px', maxFontSize: '32px' });
+    animateOnScroll($('.skill-wrapper'));
+    clickAboutMeBtn();
 });
 
 function checkMobileNav() {
@@ -13,19 +14,14 @@ function checkMobileNav() {
   });
 }
 
-function smoothScroll (duration) {
-  $('a[href^="#"]').on('click', function (event) {
-      $('.mobile-nav').toggleClass('is-open');
-      $('.mobile-nav-toggle > span').toggleClass('teal');
-      var target = $( $(this).attr('href') );
-
-      if( target.length ) {
-          event.preventDefault();
-          $('html, body').animate({
-              scrollTop: target.offset().top
-          }, duration);
-      }
-  });
+function smoothScroll (click_element, target, target_position, duration) {
+  console.log(target_position);
+  // grabbing the scrolled target
+  if( target.length ) {
+      $('html, body').animate({
+          scrollTop: target_position
+      }, duration);
+  }
 }
 
 function checkScroll()
@@ -74,19 +70,59 @@ function checkScroll()
     }
 }
 
-function animateLogos() {
-  var $logos = $('.logos'),
-      $school_logo = $('.school-logo > svg');
-
+function animateOnScroll(element) {
   $(window).scroll( function (event) {
-    var y = $(this).scrollTop()
-        logos_height = $logos.height();
+    var scroll = $(window).scrollTop(),
+        elementOffset = element.offset().top,
+        offsetDistance = (elementOffset - scroll);
 
-    if(y >= logos_height/2 && $logos.hasClass('hidden') ) {
-      $logos.toggleClass('hidden');
-      $school_logo.addClass('animate');
+    if(scroll >= offsetDistance)
+      element.addClass('animate');
+  });
+}
+
+function animateElement(element) {
+  element.toggleClass('animate');
+}
+
+// ** Need to make these classes
+function clickAboutMeBtn() {
+  var $about = $('.about'),
+      $about_btn = $('.about-btn');
+
+  $about_btn.click( function (event) {
+    if(!$about.hasClass('show-about'))
+      showAboutMe();
+    else {
+      closeAboutMe();
     }
   });
+}
+
+function showAboutMe() {
+  var $about = $('.about'),
+      $about_btn = $('.about-btn');
+
+  $about.toggleClass('show-about');
+  $about_btn.html("<h2>Hide about me</h2>");
+  
+  // add animation
+  animateElement($about);
+  smoothScroll($about_btn, $about, $about.offset().top, 1000);
+}
+
+function closeAboutMe() {
+  var $about = $('.about'),
+      $about_btn = $('.about-btn');
+  setTimeout( function () {
+                smoothScroll($about_btn, $about_btn, $about_btn.offset().top - 50, 1000);
+              },
+              100);
+  $about_btn.html("<h2>About me...</h2>");
+
+  // add animation
+  animateElement($about);
+  $about.toggleClass('show-about');
 }
 
 /*!

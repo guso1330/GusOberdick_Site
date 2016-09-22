@@ -1,0 +1,109 @@
+.animate 
+	@include transition(all 1.0s ease-in-out)
+
+.container
+	background-color: $white
+
+.content
+	height: 100%
+	margin: 0 auto
+	max-width: 960px
+	@media screen and (max-width: 970px)
+		padding: 0 20px
+
+	.about-btn-wrapper
+		padding: 50px 0
+		.about-btn
+			background-color: $white
+			border: 2px solid $black
+			display: block
+			margin: 0 auto
+			padding: 14px 32px
+			&:focus
+				outline: 0
+			&:hover
+				background-color: $black
+				color: $white
+				cursor: pointer
+	//	
+	//		About
+	//
+	.about
+		@include transition(all 1.0s ease-in-out)
+		max-height: 0
+		overflow: hidden
+		opacity: 0
+		padding-bottom: 0
+		visibility: hidden
+		&.show-about
+			display: block
+		&.animate
+			max-height: 2000px
+			opacity: 1
+			padding-bottom: 50px
+			visibility: visible
+
+		.statement
+			display: block
+			padding-top: 15px
+		//
+		//		Education
+		//
+		.education
+			margin: 0 auto
+			h2
+				padding-top: 20px
+				text-align: center
+			.logos
+				display: block
+				padding: 20px 0 20px
+				text-align: center
+			.school-logo
+				@include clearfix
+				display: inline-block
+				height: 200px
+				margin: 0 auto
+				position: relative
+				width: 200px
+				&:first-child
+					padding-right: 70px
+					&.animate
+						padding-right: 40px
+				&:last-child
+					padding-left: 40px
+				svg
+					display: block
+					height: 200px
+					position: absolute
+					width: 200px
+
+	//
+	//		Skill Bars
+	//
+	.skill-wrapper
+		margin: 0 auto
+		text-align: center
+		h2
+			padding-top: 20px
+		.skill-bar
+			+display(flex)
+			+align-items(center)
+			+justify-content(flex-start)
+			background-color: $black
+			box-shadow: -2px 2px 7px 0px rgba(0,0,0,0.75)
+			box-sizing: border-box
+			height: 50px
+			margin: 20px auto
+			opacity: 0.85
+			padding: 0 6px
+			width: 80%
+			.icon
+				float: left
+				height: 40px
+				padding: 10px 10px 10px 0
+				width: 40px
+				+clearfix()
+			.count-bar
+				border-radius: 2px
+				box-sizing: border-box
+				height: 10px

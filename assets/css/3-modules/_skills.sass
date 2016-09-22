@@ -1,28 +1,58 @@
 // 
 // SKILLS
-// 
+//
 #html
+	@include linear-gradient(90deg, $html-orange-D 50%, $html-orange-L 100%)
+	&.animate
+		@include animation(load-html 2.5s ease-in)
+		@include animateLoadBar(load-html, 70%)
 	width: 70%
-	background: #e44d26
+
 #css
+	@include linear-gradient(90deg, $css-blue-D 50%, $css-blue-L 100%)
+	&.animate
+		@include animation(load-css 2.5s ease-in)
+		@include animateLoadBar(load-css, 60%)
 	width: 60%
-	background: #1572b6
+
 #javascript
+	@include linear-gradient(90deg, $javascript-yellow-D 50%, $javascript-yellow-L 100%)
+	&.animate
+		@include animation(load-javascript 2.5s ease-in)
+		@include animateLoadBar(load-javascript, 42%)
 	width: 42%
-	background: #f0db4f
+
 #php
-	width: 20%
-	background: #6181b6
+	@include linear-gradient(90deg, $php-purple-D 50%, $php-purple-L 100%)
+	&.animate
+		@include animation(load-php 2.5s ease-in)
+		@include animateLoadBar(load-php, 37%)
+	width: 37%
 
 #cpp
+	@include linear-gradient(90deg, $cpp-maroon-D 50%, $cpp-maroon-L 100%)
+	&.animate
+		@include animation(load-cpp 2.5s ease-in)
+		@include animateLoadBar(load-cpp, 70%)
 	width: 70%
-	background: #9c033a
+
 #python
+	@include linear-gradient(90deg, $python-yellow-D 50%, $python-yellow-L 100%)
+	&.animate
+		@include animation(load-python 2.5s ease-in)
+		@include animateLoadBar(load-python, 65%)
 	width: 65%
-	background: #ffd845
+
 #java
+	@include linear-gradient(90deg, $java-red-D 50%, $java-red-L 100%)
+	&.animate
+		@include animation(load-java 2.5s ease-in)
+		@include animateLoadBar(load-java, 25%)
 	width: 25%
-	background: #eb3738
+
 #mysql
-	width: 20%
-	background: #00618a
+	@include linear-gradient(90deg, $mysql-blue-D 50%, $mysql-blue-L 100%)
+	&.animate
+		@include animation(load-mysql 2.5s ease-in)
+		@include animateLoadBar(load-mysql, 40%)
+	width: 40%

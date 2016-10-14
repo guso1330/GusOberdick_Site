@@ -2,30 +2,26 @@
 //     Head Stuff    //
 ///////////////////////
 .head-up
+	@include transition(top .2s)
 	top: -64px
-	-webkit-transition: top .2s
-	transition: top .2s
 
 .head-down
+	@include transition(top .2s)
 	top: 0px
-	-webkit-transition: top .1s
-	transition: top .1s
 
 .mobile-up
+	@include transition(top .2s)
 	top: -208px
-	-webkit-transition: top .2s
-	transition: top .2s
 
 .mobile-down
+	@include transition(top .2s)
 	top: 0px
-	-webkit-transition: top .1s
-	transition: top .1s
 
 header
 	width: 100%
 	height: $nav-height
 	box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75)
-	background-color: $nav-bar-black
+	background-color: $white-green
 	position: fixed
 	z-index: 990
 	.nav-bar
@@ -41,14 +37,16 @@ header
 		ul
 			float: right
 			li
+				@include transition(border-bottom 0.5s)
 				float: left
-				line-height: 62px
+				letter-spacing: 1.5px
+				line-height: 59px
 				text-align: center
 				width: 80px
 			li:hover
-				border-bottom: solid 1px $white
+				border-bottom: solid 3px $light_gold
 		a
-			color: $white
+			color: $forrest
 			font-weight: 300
 	
 		//
@@ -69,7 +67,7 @@ header
 				display: block
 				height: 2px
 				width: 100%
-				background: $white
+				background: $forrest
 
 			span.teal,
 				background: $teal

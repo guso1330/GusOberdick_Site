@@ -2,7 +2,8 @@
 ---
 
 // This is the single file output by sass. It is intended to ONLY @import other files.
-
+//
+// VERSION OF main.sass = 2.1
 
 // 1 - TOOLS
 @import '1-tools/bourbon/bourbon'
@@ -20,16 +21,18 @@
 
 // 3 - Modules
 @import '3-modules/page-wrap'
-@import '3-modules/header'
-@import '3-modules/eye-candy'
+// @import '3-modules/header' // Version 1.0
+// @import '3-modules/eye-candy' // Version 1.0
 //
 //	Content - Version 1
 //
 // @import '3-modules/content'
+@import '3-modules/redesignV2_1/landing-page'
+@import '3-modules/redesignV2_1/headerV2_1'
+@import '3-modules/redesignV2_1/contentV2_1'
 @import '3-modules/contentV2'
 @import '3-modules/skills'
 @import '3-modules/footer'
-
 
 // 4 - pages
 // @import '4-pages/example-page-home'

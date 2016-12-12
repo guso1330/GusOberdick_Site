@@ -1,0 +1,46 @@
+.landing-page-container
+	background: url("../img/cbus_skyline_blue.png")
+	background-position: center 20%
+	background-repeat: no-repeat
+	background-size: cover
+	height: 100vh
+	width: 100vw
+	.landing-content-container
+		height: calc(100vh - 8rem - 1.2rem)
+		margin: 0 auto
+		max-width: 960px
+		padding-top: $nav-height-V2_1
+		position: relative
+		// The photoshop design has 120px of blank space between
+		// the navbar and the header-blurb and headshot
+		.header-blurb
+			position: relative
+			z-index: 9
+			h1
+				font-size: 8.2rem
+				padding: 12rem 1.2rem 0 0
+				text-align: right
+				z-index: 9
+
+			h3
+				// display: inline-block
+				line-height: 2rem
+				padding: 2rem 1.2rem 0 0
+				text-align: right
+				z-index: 9
+				position: relative
+
+		.code-snippets
+			bottom: 0
+			opacity: 0.60
+			padding: 0 4rem 12rem 0
+			position: absolute
+			right: 0
+			width: calc(100vw * (3/7))
+			z-index: 8
+	.headshot
+		bottom: 0
+		left: 0
+		position: absolute
+		max-width: calc(100vw * (2/5))
+		z-index: 10

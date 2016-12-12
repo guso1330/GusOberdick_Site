@@ -2,6 +2,7 @@ $(function() {
     checkScroll();
     // smoothScroll(100);
     checkMobileNav();
+    checkNavBackground();
     $('.blurb').fitText(1.2, { minFontSize: '14px', maxFontSize: '32px' });
     animateOnScroll($('.skill-wrapper'));
     clickAboutMeBtn();
@@ -29,8 +30,8 @@ function checkScroll()
     // Hide Header on scroll down
     var didScroll;
     var lastScrollTop = 0;
-    var delta = 10;
     var navbarHeight = $('header').outerHeight();
+    var delta = navbarHeight;
     var mobileNavHeight = $('.mobile-nav').outerHeight();
 
     $(window).scroll(function(event){
@@ -70,6 +71,34 @@ function checkScroll()
     }
 }
 
+function checkNavBackground() {
+  var $header = $('header');
+  var didScroll;
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
+
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }
+  }, 250);
+
+  function hasScrolled() {    
+    var st = $(this).scrollTop();
+    console.log(st);
+    if($header.offset().top <= 100) {
+      $header.removeClass('darkBg');
+      $header.removeClass('head-down');
+    }
+    else {
+      $header.addClass('darkBg');
+    }
+  }
+}
+
+
 function animateOnScroll(element) {
   $(window).scroll( function (event) {
     var scroll = $(window).scrollTop(),
@@ -104,7 +133,7 @@ function showAboutMe() {
       $about_btn = $('.about-btn');
 
   $about.toggleClass('show-about');
-  $about_btn.html("<h2>Hide about me</h2>");
+  $about_btn.html("<h3>Hide about me</h3>");
   
   // add animation
   animateElement($about);
@@ -118,7 +147,7 @@ function closeAboutMe() {
                 smoothScroll($about_btn, $about_btn, $about_btn.offset().top - 50, 1000);
               },
               100);
-  $about_btn.html("<h2>About me...</h2>");
+  $about_btn.html("<h3>About me...</h3>");
 
   // add animation
   animateElement($about);

@@ -1,0 +1,98 @@
+// Gus Oberdick
+// 
+// Header Sass - Version 2.1
+//
+// The Header is now completely transparent when just on the landing page.
+// To do:
+//		- animate the tab when hovered/on page load
+//		- breaks off when scrolls
+//
+.head-up
+	@include transition(top .2s, background-color 0.5s)
+	top: -80px
+	.nav-bar .head-tab
+		box-shadow: none
+		.nav-bar .head-tab
+			background: none
+			box-shadow: none
+			height: $nav-height-V2_1
+			line-height: $nav-height-V2_1
+			top: 0
+			li a
+				&:hover
+					color: $white-1
+
+.head-down
+	@include transition(top .2s, background-color 0.5s)
+	top: 0px
+	&.darkBg
+		background-color: #0f161c
+		// background-color: rgba(0, 0, 0, 0.5)
+		.nav-bar .head-tab
+			background: none
+			box-shadow: none
+			height: $nav-height-V2_1
+			line-height: $nav-height-V2_1
+			top: 0
+			li a
+				&:hover
+					color: $white-1
+
+
+header
+	width: 100%
+	height: $nav-height-V2_1
+	background-color: none
+	position: fixed
+	z-index: 999
+	.nav-bar
+		color: $white
+		margin: 0 auto
+		position: relative
+		text-transform: capitalize
+		max-width: 96rem
+		.head-tab
+			@include transition(all 0.2s ease-in-out)
+			background-color: $orange-red
+			box-shadow: -1px 1px 4px 1px rgba(0, 0, 0, 0.50)
+			display: inline-block
+			height: 10rem
+			line-height: 10rem
+			position: absolute
+			text-align: center
+			top: -2rem
+			width: 8rem
+			&:hover
+				line-height: $nav-height-V2_1
+				top: 0rem
+		ul
+			float: right
+			li
+				float: left
+				font-size: 1.6rem
+				font-weight: 300
+				letter-spacing: 0.2rem
+				list-style-type: none
+				line-height: calc(8rem - 0.3rem)
+				padding: 0 1.2rem
+				width: 8rem
+				text-align: center
+				&:after
+					@include transition(transform 0.5s ease-in-out)
+					@include transform(scaleX(0))
+					content: ''
+					display: block
+					border-bottom: 0.3rem solid $orange-red
+				&:hover:after
+					@include transform(scaleX(1))
+				a
+					@include transition(color 0.3s ease-in-out)
+					color: $white-1
+					display: inline-block
+					font-weight: 300
+					height: 100%
+					text-decoration: none
+					width: 100%
+					&:hover
+						color: $black-blue
+						cursor: pointer
